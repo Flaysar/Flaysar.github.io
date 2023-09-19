@@ -52,13 +52,17 @@
 		<li>
 			<a>Ссылки на прямоугольном и круглом объектах</a>
 		</li>
-
 		<li>
-		<img src="i.jpg" usemap="#Map"  alt="Земля" width="500" height="300" />
+			<img src="прямоуг.jpg" usemap="#Map" alt="прямоугольник" width="200" height="150" />
+		</li>
+		<li>
+		<img src="круг.jpg" usemap="#2Map"  alt="круг" width="250" height="250" />
 		
 			<map name="Map">
-			<area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="rect" coords="250, 150, 500, 300" alt="прямоугольная ссылка">
-			<area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="circle" coords="50,30,150" alt="круглая ссылка">
+			<area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="rect" coords="100,0,200,150" alt="прямоугольная ссылка">
+			</map>
+			<map name="2Map">
+				<area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="circle" coords="100,100,75" alt="круглая ссылка">
 			</map>
 		</li>
 		<li>
@@ -92,21 +96,21 @@
 	
 	<form id="form">
 		<label for="fio">ФИО:</label>
-		<input type="text" id="fio" name="fio" required pattern="^[a-zA-Zа-яА-Я]+$"/><br /><br />
+		<input type="text" id="fio" name="fio" /><br /><br />
   
 		<label for="phone">Телефон:</label>
-		<input type="tel" id="phone" name="phone" required pattern="^[ 0-9]+$"/><br /><br />
+		<input type="tel" id="phone" name="phone" /><br /><br />
   
 		<label for="email">E-mail:</label>
-		<input type="email" id="email" name="email" required/><br /><br />
+		<input type="email" id="email" name="email" /><br /><br />
   
 		<label for="birthdate">Дата рождения:</label>
-		<input type="date" id="birthdate" name="birthdate" required /><br /><br />
+		<input type="date" id="birthdate" name="birthdate" /><br /><br />
   
 		<label>Пол:</label>
-		<input type="radio" id="male" name="gender" value="male" required />
+		<input type="radio" id="male" name="gender" value="male" />
 		<label for="male">Мужской</label>
-		<input type="radio" id="female" name="gender" value="female" required />
+		<input type="radio" id="female" name="gender" value="female" />
 		<label for="female">Женский</label><br /><br />
   
 		<a>Любимый язык программированияf</a>
@@ -116,7 +120,6 @@
 			  <option disabled>Любимый язык программирования</option>
 			  <option value="Js">Js</option>
 			  <option value="C++" >C++</option>
-			  <option value="C" >C</option>
 			  <option value="Pascal" >Pascal</option>
 			  <option value="PHP" >PHP</option>
 			  <option value="Python" >Python</option>
@@ -125,16 +128,15 @@
 			  <option value="Clojure" >Clojure</option>
 			  <option value="Prolog" >Prolog</option>
 			  <option value="Scala" >Scala</option>
-			  <option value="SQL" >SQL</option>
-			  
+			  <option value="C" >C</option>
 		  </select>
 	  </label><br /><br />
   
 		<label for="bio">Биография:</label><br />
 		<textarea id="bio" name="bio" rows="4" cols="50"></textarea><br /><br />
   
-		<input type="checkbox" id="contract" name="contract" required />
-		<label for="contract">С контрактом ознакомлен(а) </label><br /><br />
+		<input type="checkbox" id="contract" name="contract" />
+		<label for="contract">С контрактом ознакомлен(а)</label><br /><br />
   
 		<input type="submit" value="Сохранить" />
 	  </form>
