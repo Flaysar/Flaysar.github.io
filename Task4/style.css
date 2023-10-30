@@ -150,13 +150,16 @@ h1 {
   margin-bottom: 10px;
 }
 
-select, textarea {
+select {
   border: 2px solid #2ee2b5;
-  height: 100px;
+  height: 30px;
   width: 100px;
   padding: 10px;
   border-radius: 20px;
   margin-bottom: 10px;
+}
+textarea {
+  border: 2px solid #2ee2b5;
 }
 
 select::-webkit-scrollbar {
