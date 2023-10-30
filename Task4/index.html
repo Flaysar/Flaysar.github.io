@@ -1,209 +1,271 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>
-        Задание 2
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+    <title>Задание 4</title>
 </head>
-
 <body>
-    <header class="header">
-        <ul class="ul">
-            <li><a href="#section">Начало</a></li>
-            <li><a href="#table">Таблица</a></li>
-            <li><a href="#form">Форма</a></li>
-        </ul>
-        <a href="https://www.youtube.com/watch?v=HcHwvSGV2Yk" class="logo">
-            <img src="invok.jpg"
-                 alt="Great Invoker" width="90" height="90">
-        </a>
-        <h1 id="task1">Главная страница</h1>
+    <header class="header bg-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <div class="d-flex align-items-center">
+                <div class="logo mr-3">
+                    <a href="https://www.youtube.com/watch?v=HcHwvSGV2Yk"><img src="invok.jpg"
+                            alt="Great Invoker" width="90" height="90"></a>
+                </div>
+                <div class="header__title">
+                    Главная страница
+                </div>
+            </div>
+            <div class="col-12 col-md-6 container-lg">
+                <div class="header__content-down text-right">
+                    <nav>
+                        <div class="container-fluid">
+                            <ul class="list-inline flex-row flex-sm-column">
+                                <nav>
+                                    <div class="container-fluid">
+                                        <ul class="list-inline flex-row flex-sm-column">
+                                            <li class="list-inline-item"><a class="header__menu-link" href="#task">Ссылки</a></li>
+                                            <li class="list-inline-item"><a class="header__menu-link" href="#table">Таблица</a></li>
+                                            <li class="list-inline-item"><a class="header__menu-link" href="#form">Форма</a></li>
+                                          </ul>
+                                      </div>
+                                  </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </header>
+    <main class="main">
 
-    </header>
-
-    <nav>
-
-        <ul>
-            <li>
-                <a id="section" href="http://kubsu.ru/">абсолютная ссылка КубГу</a>
-            </li>
-            <li>
-                <a href="https://kubsu.ru/">абсолютная ссылка КубГу в протаколе https</a>
-            </li>
-            <li>
-                <a href="image.jpg"><img src="image.jpg" alt="Цветок" width="300" height="300" /></a>
-            </li>
-            <li>
-                <a href="/hello.html">cокращенная ссылка на внутреннюю страницу</a>
-            </li>
-            <li>
-                <a href="./index.html">ссылка на главную страницу</a>
-            </li>
-            <li>
-                <a href="#section">фрагмент текущей</a>
-            </li>
-            <li>
-                <a href="https://moodle.kubsu.ru/course/view.php?id=780?params1=value1&params2=value2&params3=value3">ссылка с тремя параметрами текущей страницы</a>
-            </li>
-            <li>
-                <a href="https://moodle.kubsu.ru/course/view.php?id=780?id=hi">Ссылка с параметром id</a>
-            </li>
-            <li>
-                <a href="./hello.html">Относительная ссылка на страницу в текущем каталоге</a>
-            </li>
-            <li>
-                <a href="./about/about.html">Относительная ссылка на about в каталоге about</a>
-            </li>
-            <li>
-                <a href="./about/about.html">В about относительная ссылка на каталог выше</a>
-            </li>
-            <li>
-                <a href="./about/under_about/new.html">В about переход на уровень ниже, где есть относительная на каталог двумя уровнями выше </a>
-            </li>
-            <li>
-                <p> Мы берем задания на <a href="https://moodle.kubsu.ru/course/view.php?id=780"> этом сайте</a> (контекстная ссылка в тексте) </p>
-            </li>
-            <li>
-                <a href="https://www.kubsu.ru/#section-content">Ссылка на секцию в стороннем сайте</a>
-            </li>
-            <li>
-                <a>Ссылки на прямоугольном и круглом объектах</a>
-            </li>
-
-            <li>
-                <img src="i.jpg" usemap="#Map" alt="Земля" width="500" height="300" />
-
-                <map name="Map">
-                    <area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="rect" coords="250, 150, 500, 300" alt="прямоугольная ссылка">
-                    <area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="circle" coords="50,30,150" alt="круглая ссылка">
-                </map>
-            </li>
-            <li>
-                <a href="">ссылка с пустым href</a>
-            </li>
-            <li>
-                <a> ссылка без href</a>
-            </li>
-            <li>
-                <a href="https://moodle.kubsu.ru/course/view.php?id=780" rel="nofollow">ссылка по которой нельзя следовать яндексу</a>
-            </li>
-            <li>
-                <!--noindex--><a href="https://moodle.kubsu.ru/course/view.php?id=780">ссылка по которой нельзя индексировать яндексу</a><!--/noindex-->
-            </li>
-            <li>
-                <ol>
-                    <li>
-                        <a href="#task1" title="task">Начало</a>
+        <section class="flex-box-order">
+            <div class="container">
+                <div class="container-fluid flex flex-column d-flex">
+                    <section class="section__links order-2 order-md-1">
+                        <ul class="list-unstyled">
+                          <li class="references__item">
+                            <h2 id="task">Ссылки</h2>
+                        </li>
+                      <li class="references__item">
+                        <a href="http://www.kubsu.ru/index.php">Основной сайт КубГУ</a>
                     </li>
-                    <li>
-                        <a href="#form" title="form">Форма</a>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="https://www.kubsu.ru/index.php">Основной сайт КубГУ в протоколе https</a>
                     </li>
-                </ol>
-            </li>
-            <li>
-                <a href=""></a>
-            </li>
-        </ul>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link">
+                            <img src="image.jpg" alt="Цветок" width="300" height="300">
+                        </a>
+                    </li>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="/Task3//hello.html"> Внутренняя страница(4) </a>
+                    </li>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="/index.html">Сокращенная ссылка на главную страницу</a>
+                    </li>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="#form">Ссылка на фрагмент</a>
+                    </li>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="https://moodle.kubsu.ru/course/view.php?id=780?params1=value1&params2=value2&params3=value3" target="_blank">Ссылка с тремя параметрами в URL</a>
+                    </li>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="https://www.kubsu.ru#privet">Ссылка с параметром id(8) </a>
+                    </li>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="./hello.html"> Относительная на страницу в текущем каталоге(9)</a>
+                    </li>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="./about/about.html">Ссылка относительная на страницу в каталоге about(10)</a>
+                    </li>
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href ="./about/about.html"> Относительная на страницу выше текущего(11)</a>
+  
+                    <li class="references__item">
+                        <a class="flex-box-order__list-link" href="./about/under_about/new.html">Ссылка на страницу на 2 уровня ниже(12)</a>
+                    </li>
+                    <li class="references__item">
+                        <p>Я работал с 16-ричным калькулятором
+                            <a class="flex-box-order__list-link" href="https://poschitat.online/shestnadcaterichnyi-kalkulyator">здесь</a>
+                            (Контекстная в тексте абзаца(13))
+                        </p>
+                    </li>
+                </li>
+                <li class="references__item">
+                    <a class="flex-box-order__list-link" href="https://www.kubsu.ru/#section-content">Ссылка на фрагмент страницы стороннего сайта</a>
+                </li>
+                <li class="references__item">
+                    <p>Ccылки из прямоугольных и круглых областей картинки(15)</p>
+                    <img src="i.jpg" alt="Земля" usemap="#Map" width="300" height="200">
+                    <map name="Map">
+                        <area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="rect" coords="0,0,75,75"
+                            alt="ссылка на квадратном объекте">
+                        <area href="https://www.kubsu.ru" shape="circle" coords="200,200,100"
+                            alt="ссылка на круглом объекте">
+                    </map>
+                </li>     
+                    <li class="references__item">
+                        <a href="/">Ссылка с пустым href</a>
+                    </li>
+                    <li class="references__item">
+                        <a> Ссылка без href</a>
+                    </li>
+                    <li class="references__item">
+                        <a href="https://kubsu.ru" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам(18)</a>
+                    </li>
+                    <li class="references__item">
+                            <!--noindex--><a href="https://kubsu.ru/"> Ссылка по которой нельзя индексировать
+                                яндексу(19)</a><!--/noindex-->
+                    </li>
+                    <li class="references__item">
+                        <p>Список ссылок навигации сайта(20)</p>
+                        <nav>
+                            <ol class="list_navig">
+                                <li><a href="#task1" title="task">Начало</a></li>
+                                <li><a href="#table" title="table">Таблица</a></li>
+                                <li><a href="#form" title="form">Форма</a></li>
+                            </ol>
+                        </nav>
+                    </li>
+                    <li class="references__item">
+                        <a href="ftp://demo:demo@http://demo.wftpserver.com/main.html/download/Summer.jpg">FTP файл(21)</a>
+                    </li>
+                </ul>
 
-        <h2 id="table">Таблица</h2>
+                <!--======== TABLE ========-->
 
-        <table>
-            <tr class="first">
-                <th>Колонка 1 </th>
-                <th>Колонка 2 </th>
-                <th>Колонка 3 </th>
-                <th>Колонка 4 </th>
-            </tr>
-            <tr class="second">
-                <td colspan="2">Ячейка 11 объединенная с 12</td>
-                <td>Ячейка 13</td>
-                <td>Ячейка 14</td>
-            </tr>
-            <tr class="first">
-                <td>Ячейка 21</td>
-                <td>Ячейка 22</td>
-                <td colspan="2">Ячейка 23 объединенная с 24</td>
-            </tr>
-            <tr class="second">
-                <td>Ячейка 31</td>
-                <td colspan="2">Ячейка 32 объединенная с 33</td>
-                <td>Ячейка 34</td>
-            </tr>
-            <tr class="first">
-                <td colspan="2">Ячейка 41 объединенная с 42</td>
-                <td>Ячейка 43</td>
-                <td>Ячейка 44</td>
-            </tr>
-            <tr class="second">
-                <td>Ячейка 51</td>
-                <td>Ячейка 52</td>
-                <td rowspan="2">Ячейка 53 объединенная с 63</td>
-                <td>Ячейка 54</td>
-            </tr>
-            <tr class="first">
-                <td>Ячейка 61</td>
-                <td>Ячейка 62</td>
-                <td>Ячейка 64</td>
-            </tr>
-        </table>
+            </section>
+                <section class="section__table order-1 order-md-2">
+                    <table class="table table-bordered">
+                      <tr class="odd">
+                        <th class="table_header" colspan="4" id="table">Таблица</th>
+                    </tr>
+                        
+                    <tr class="even">
+                        <th class="flex-box-order__table-item">Колонка 1</th>
+                        <th class="flex-box-order__table-item">Колонка 2</th>
+                        <th class="flex-box-order__table-item">Колонка 3</th>
+                        <th class="flex-box-order__table-item">Колонка 4</th>
+                    </tr>
+                    <tr class="odd">
+                        <td class="flex-box-order__table-item" colspan="2">11</td>
+                        <td class="flex-box-order__table-item">31</td>
+                        <td class="flex-box-order__table-item">41</td>
+                    </tr>
+                    <tr class="even">
+                        <td class="flex-box-order__table-item">12</td>
+                        <td class="flex-box-order__table-item">22</td>
+                        <td class="flex-box-order__table-item">32</td>
+                        <td class="flex-box-order__table-item">42</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="flex-box-order__table-item" rowspan="2">13</td>
+                        <td class="flex-box-order__table-item">23</td>
+                        <td class="flex-box-order__table-item">33</td>
+                        <td class="flex-box-order__table-item">43</td>
+                    </tr>
+                    <tr class="even">
+                        <td class="flex-box-order__table-item">24</td>
+                        <td class="flex-box-order__table-item" colspan="2">34</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
 
-        <h2 id="form">Форма</h2>
-
-        <form>
-            <label for="fio">ФИО:</label>
-            <input type="text" id="fio" name="fio" required pattern="^[a-zA-Zа-яА-Я]+$" /><br /><br />
-
-            <label for="phone">Телефон:</label>
-            <input type="tel" id="phone" name="phone" required pattern="^[ 0-9]+$" /><br /><br />
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required /><br /><br />
-
-            <label for="birthdate">Дата рождения:</label>
-            <input type="date" id="birthdate" name="birthdate" required /><br /><br />
-
-            <label>Пол:</label>
-            <input type="radio" id="male" name="gender" value="male" required />
-            <label for="male">Мужской</label>
-            <input type="radio" id="female" name="gender" value="female" required />
-            <label for="female">Женский</label><br /><br />
-
-            <a>Любимый язык программированияf</a>
-            <label>
-                <br />
-                <select>
-                    <option disabled>Любимый язык программирования</option>
-                    <option value="Js">Js</option>
-                    <option value="C++">C++</option>
-                    <option value="C">C</option>
-                    <option value="Pascal">Pascal</option>
-                    <option value="PHP">PHP</option>
-                    <option value="Python">Python</option>
-                    <option value="Java">Java</option>
-                    <option value="Haskel">Haskel</option>
-                    <option value="Clojure">Clojure</option>
-                    <option value="Prolog">Prolog</option>
-                    <option value="Scala">Scala</option>
-                    <option value="SQL">SQL</option>
-
-                </select>
-            </label><br /><br />
-
-            <label for="bio">Биография:</label><br />
-            <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br /><br />
-
-            <input type="checkbox" id="contract" name="contract" required />
-            <label for="contract">С контрактом ознакомлен(а) </label><br /><br />
-
-            <input type="submit" value="Сохранить" />
-        </form>
-    </nav>
-    <footer class="footer-bg">
-        Е. Хохлов
-    </footer>
-
-</body>
-</html>
+        <section class="section__form">
+                    <h2 id="form">Форма</h2>
+                    <form>
+                        <div class="form-group">
+                        <label for="fio">ФИО: </label> 
+                        <input 
+                            type="text"
+                            id="fio"
+                            name="fio"
+                            class="form-control"
+                            required 
+                            pattern="^[А-Яа-яЁё\s]+$"
+                        />
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Телефон:</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="form-control"
+                        required
+                        pattern="^[ 0-9]+$"
+                      />
+                    </div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required /><br /><br />
+        
+                    <label for="birthdate">Дата рождения:</label>
+                    <input
+                      type="date"
+                      id="birthdate"
+                      name="birthdate"
+                      required
+                    /><br /><br />
+        
+                    <label>Пол:</label>
+                    <input type="radio" id="male" name="gender" value="male" required />
+                    <label for="male">Мужской</label>
+                    <input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                      required
+                    />
+                    <label for="female">Женский</label><br /><br />
+        
+                    <label>Любимый язык программирования:</label>
+                    <label>
+                      <br />
+                      <select>
+                        <option disabled>Любимый язык программирования</option>
+                        <option value="Js">Js</option>
+                        <option value="C++">C++</option>
+                        <option value="Pascal">Pascal</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="Haskel">Haskel</option>
+                        <option value="Clojure">Clojure</option>
+                        <option value="Prolog">Prolog</option>
+                        <option value="Scala">Scala</option>
+                        <option value="C">C</option>
+                      </select> </label
+                    ><br /><br />
+        
+                    <label for="bio">Биография:</label><br />
+                    <textarea id="bio" name="bio" rows="4" cols="50" required></textarea
+                    ><br /><br />
+        
+                    <input type="checkbox" id="contract" name="contract" required />
+                    <label for="contract">С контрактом ознакомлен(а)</label><br /><br />
+        
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                  </form>
+                </section>
+              </div>
+            </main>
+        <footer class="footer">
+        <div class="content">
+            <div class="wrapper">
+                <div class="footer__text">
+                    Егор Хохлов
+                </div>
+            </div>
+        </div>
+        </footer>
+        </body>
+        </html>
