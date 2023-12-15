@@ -244,20 +244,20 @@ select::-webkit-scrollbar {
   }
 }
 
+
 /* Слайдер */
 .slick-slider{
 	min-width: 0;
 }
 /* Ограничивающая оболочка */
 .slick-list {
-	overflow: hidden;
+	overflow: visible;
 }
 /* Лента слайдов */
 .slick-track{
 	display: flex;
 	align-items: flex-start;
 }
-
 
 /* Конкретный слайдер */
 .slider {
@@ -281,13 +281,14 @@ select::-webkit-scrollbar {
   width: 30px;
   height: 60px;
 }
+
 .slider .slick-arrow.slick-prev{
   left: 0;
-  background: url('/images/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+  background: url('./images/sl-arrow_l.jpg') 0 0 / 100% no-repeat;
 }
 .slider .slick-arrow.slick-next{
   right: 0;
-  background: url('/images/sl-arrow_r.jpg') 0 0 / 100% no-repeat;
+  background: url('./images/sl-arrow_r.jpg') 0 0 / 100% no-repeat;
 }
 .slider .slick-arrow.slick-disabled{
   opacity: 0.1;

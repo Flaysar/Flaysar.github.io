@@ -1,15 +1,26 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  />
-    <title>Задание 4</title>
-</head>
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <title>Задание 8</title>
+  </head>
+  
 <body>
     <header class="header bg-light">
         <div class="container">
@@ -20,29 +31,25 @@
                     <a href="https://www.youtube.com/watch?v=HcHwvSGV2Yk"><img src="invok.jpg"
                             alt="Great Invoker" width="90" height="90"></a>
                 </div>
-                <div class="header__title">
                     Главная страница
                 </div>
             </div>
             <div class="col-12 col-md-6 container-lg">
-                <div class="header__content-down text-right">
-                    <nav>
-                        <div class="container-fluid">
-                            <ul class="list-inline flex-row flex-sm-column">
-                                <nav>
-                                    <div class="container-fluid">
-                                        <ul class="list-inline flex-row flex-sm-column">
-                                            <li class="list-inline-item"><a class="header__menu-link" href="#task">Ссылки</a></li>
-                                            <li class="list-inline-item"><a class="header__menu-link" href="#table">Таблица</a></li>
-                                            <li class="list-inline-item"><a class="header__menu-link" href="#form">Форма</a></li>
-                                          </ul>
-                                      </div>
-                                  </nav>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </header>
+                <div class="header__content-down text-left">
+                  <nav>
+                    <div class="container-fluid">
+                        <ul class="list-inline flex-row flex-sm-column">
+                          <li class="list-inline-item"><a class="header__menu-link" href="#task">Ссылки</a></li>
+                          <li class="list-inline-item"><a class="header__menu-link" href="#table">Таблица</a></li>
+                          <li class="list-inline-item"><a class="header__menu-link" href="#form">Форма</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
     <main class="main">
 
         <section class="flex-box-order">
@@ -143,7 +150,7 @@
 
             </section>
                 <section class="section__table order-1 order-md-2">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-sm">
                       <tr class="odd">
                         <th class="table_header" colspan="4" id="table">Таблица</th>
                     </tr>
@@ -204,8 +211,10 @@
                         pattern="^[ 0-9]+$"
                       />
                     </div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required /><br /><br />
+                    <div class="form-group">
+                         <label for="email">E-mail:</label>
+                         <input type="email" id="email" name="email"  class="form-control" required /><br /><br />
+                    </div>
         
                     <label for="birthdate">Дата рождения:</label>
                     <input
@@ -255,17 +264,102 @@
         
                     <button type="submit" class="btn btn-primary">Сохранить</button>
                   </form>
-                </section>
-              </div>
-            </main>
-        <footer class="footer">
-        <div class="content">
-            <div class="wrapper">
-                <div class="footer__text">
-                    Егор Хохлов
+
+                  <section class="order-4">
+                    <h1>Калькулятор</h1>
+                    <label for="serviceType">Выберите тип:</label>
+                    <input
+                      type="radio"
+                      name="serviceType"
+                      value="type1"
+                      id="type1"
+                      data-price="5"
+                    />
+                    Тип 1
+                    <input
+                      type="radio"
+                      name="serviceType"
+                      value="type2"
+                      id="type2"
+                      data-price="10"
+                    />
+                    Тип 2
+                    <input
+                      type="radio"
+                      name="serviceType"
+                      value="type3"
+                      id="type3"
+                      data-price="15"
+                    />
+                    Тип 3
+        
+                    <div id="optionsDiv">
+                      <label for="optionsSelect">Выберите опцию:</label>
+                      <select class="product_select" id="optionsSelect">
+                        <option value="option1" data-price="5">Карамельный попкорн</option>
+                        <option value="option2" data-price="10">Соленый попкорн</option>
+                      </select>
+                    </div>
+        
+                    <div id="propertiesDiv">
+                      <label for="propertyCheckbox">Дополнительный напиток:</label>
+                      <input type="checkbox" id="propertyCheckbox" data-price="5" />
+                        $3
+                    </div>
+        
+                    <label for="quantity">Введите количество услуг:</label>
+                    <input type="text" id="quantity" placeholder="Количество услуг" />
+        
+                    <p>Стоимость заказа: $<span id="totalCost">0</span></p>
+                  </section>
+        
+                  <section class="slider-section border-slider p-3 order-5">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="slider">
+                            <div><img src="./images/7_wonders.jpg" alt="Slider Image 1" class="img-fluid" width="300" height="300" /></div>
+                            <div><img src="./images/aeons_end.jpg" alt="Slider Image 2" class="img-fluid" width="300" height="300" /></div>
+                            <div><img src="./images/code_names.webp" alt="Slider Image 3" class="img-fluid" width="300" height="300" /></div>
+                            <div><img src="./images/spirit_island.jpg" alt="Slider Image 4" class="img-fluid" width="300" height="300" /></div>
+                            <div><img src="./images/treasure_island.jpg" alt="Slider Image 5" class="img-fluid" width="300" height="300" /></div>
+                            <div><img src="./images/dalshe-i-blizhe.png" alt="Slider Image 5" class="img-fluid" width="300" height="300" /></div>
+                            <div><img src="./images/witcher.jpg" alt="Slider Image 5" class="img-fluid" width="300" height="300" /></div>
+                            <div><img src="./images/crazy_palace.webp" alt="Slider Image 5" class="img-fluid" width="300" height="300" /></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  
                 </div>
+              </div>
+              <div class="order-3 m-3 justify-content-center" id="elem-border">
+                <h1>Форма обратной связи</h1>
+                <br>
+                <button id="openPopup">Свяжитесь с нами</button>
+        
+                <div class="popup-overlay"> <div class="popup-content"> <form id="feedbackForm"> <div class="form-group"> <label for="fullName">ФИО:</label> <input type="text" id="fullName" name="fullName" required> </div> <div class="form-group"> <label for="email">Email:</label> <input type="email" id="email" name="email" required> </div> <div class="form-group"> <label for="phone">Телефон:</label> <input type="tel" id="phone" name="phone" required> </div> <div class="form-group"> <label for="organization">Организация:</label> <input type="text" id="organization" name="organization"> </div> <div class="form-group"> <label for="message">Сообщение:</label> <textarea id="message" name="message" rows="5" required></textarea> </div> <div class="checkbox-group"> <input type="checkbox" id="agreement" name="agreement" required> <label for="agreement">Я согласен с политикой обработки персональных данных.</label> </div> <div class="submit-button"> <button type="submit">Отправить</button> </div> </form>
+                <div class="message" id="responseMessage"></div>
+                </div>
+                </div> 
             </div>
-        </div>
-        </footer>
-        </body>
+            </main>
+            <footer class="footer">
+              <div class="content">
+                  <div class="wrapper">
+                      <div class="footer__text">
+                          Егор Хохлов
+                      </div>
+                  </div>
+              </div>
+              </footer>
+        
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        
+            <!-- Подключаем слайдер Slick -->
+            <script src="slick.min.js"></script>
+        
+            <script src="./script.js"></script>
+          </body>
         </html>
