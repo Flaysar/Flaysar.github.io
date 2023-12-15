@@ -40,7 +40,7 @@ class Product {
   
     try {
         let product = new Product(productOption, quantity, Number(souce), Number(bag));
-        document.getElementById('finalPrice').textContent = 'Final price: ' + product.getFinalPrice();
+        document.getElementById('finalPrice').textContent = 'Итоговая цена: ' + product.getFinalPrice();
     } catch (error) {
         console.error(error.message);
         alert(error.message);
