@@ -1,0 +1,11 @@
+@media (max-width: 1040px) { 
+  #section_1{
+    height: 1000px;
+  }
+  #black{
+    height: 1000px;
+  }
+  #myVideo {
+    height: 1000px;
+  }
+}
